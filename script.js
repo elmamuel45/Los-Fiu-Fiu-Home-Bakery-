@@ -12,11 +12,11 @@ const products = [
   {
     id: 2,
     name: "Brownie con Crema 9 oz",
-    category: "tres-leches",
+    category: "carlotas",
     price: 180,
     description: "Trocitos de brownie de chocolate mezclados con suave crema sabor vainilla y crujientes pedacitos de Oreo. ¡La combinación perfecta para satisfacer tu antojo dulce! ",
     image: "imagenes/Copa Cookies & Cream.jpg",
-    badge: "Especialidad 🥥"
+    badge: "Especialidad 🍪"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const products = [
   {
     id: 4,
     name: "Bizcocho de Chocolate con Dulce de Leche",
-    category: "tres-leches",
+    category: "carlotas",
     price: 280,
     description: "Bizcocho de puro cacao (chocolate), relleno de dulce de leche y cubierto con trocitos de Oreo. ¡Puro placer en cada bocado!",
     image: "imagenes/Slice Fudge & Caramel.jpg"
@@ -47,9 +47,27 @@ const products = [
     id: 6,
     name: "Choco flan",
     category: "combos",
-    price: 380,
+    price: 280,
     description: "La combinación perfecta que enamora: una base de suave y húmedo bizcocho de chocolate intenso coronado con un sedeciente y cremoso flan de vainilla casero",
     image: "imagenes/chocoflam.png",
+    badge: "Ahorra 🎁"
+  },
+  {
+    id: 7,
+    name: "Carlota de Chinola",
+    category: "tres-leches",
+    price: 280,
+    description: "Deliciosa crema de chinola con capas de galletas de vainilla. ¡Cremosa, dulce y llena de sabor tropical!",
+    image: "imagenes/Carlota de Chinola.jpeg",
+    badge: "Especialidad 🍊"
+  },
+  {
+    id: 7,
+    name: "Cheesecake de Chinola",
+    category: "combos",
+    price: 380,
+    description: "Cremoso cheesecake de queso crema y crema de leche, elaborado con chinola para un toque tropical irresistible",
+    image: "imagenes/Cheesecake de Chinola.jpeg",
     badge: "Ahorra 🎁"
   }
 ];
