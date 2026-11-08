@@ -1,0 +1,279 @@
+:root {
+  --primary-pink: #ff5e83;
+  --primary-pink-hover: #e0486d;
+  --secondary-cream: #fff9f5;
+  --bg-light-pink: #fff0f3;
+  --text-dark: #2b2b2b;
+  --text-muted: #6c757d;
+  --border-color: #f1e4e8;
+  --whatsapp-green: #25d366;
+  --whatsapp-green-hover: #1da851;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+}
+
+/* Estilo para el contenedor del logo */
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  background-color: #fff0f3; /* Fondo rosado suave idéntico al de tu ejemplo */
+  border-radius: 12px;       /* Esquinas redondeadas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;          /* Oculta lo que se salga del recuadro */
+  padding: 6px;              /* Espacio interno para que el bizcocho respire */
+}
+
+/* Estilo para la imagen del bizcocho dentro del logo */
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* Mantiene el bizcocho completo sin recortarlo */
+}
+
+h1, h2, h3, .brand-title {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.brand-logo {
+  font-size: 1.8rem;
+  background: var(--bg-light-pink);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.brand-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.brand-subtitle {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: var(--primary-pink);
+  font-weight: 700;
+}
+
+.promo-banner {
+  background: var(--bg-light-pink);
+  color: var(--primary-pink-hover);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Botones */
+.btn-pink {
+  background-color: var(--primary-pink);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-pink:hover {
+  background-color: var(--primary-pink-hover);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-cart {
+  background-color: var(--bg-light-pink);
+  color: var(--primary-pink);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-cart:hover {
+  background-color: var(--primary-pink);
+  color: #ffffff;
+}
+
+.btn-whatsapp {
+  background-color: var(--whatsapp-green);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--whatsapp-green-hover);
+  color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--secondary-cream);
+}
+
+.bg-soft-primary {
+  background-color: var(--bg-light-pink);
+  color: var(--primary-pink);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.hero-img {
+  max-height: 380px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-floating-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 12px 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Filtros y Buscador */
+.search-box {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-box input {
+  height: 46px;
+  border: 1px solid var(--border-color);
+  background-color: #fcfcfc;
+}
+
+.search-box input:focus {
+  border-color: var(--primary-pink);
+  box-shadow: 0 0 0 0.25rem rgba(255, 94, 131, 0.15);
+}
+
+.btn-filter {
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  background-color: #ffffff;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.btn-filter.active, .btn-filter:hover {
+  background-color: var(--primary-pink);
+  color: #ffffff;
+  border-color: var(--primary-pink);
+}
+
+/* Tarjetas de Producto */
+.product-card {
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.product-card-img-wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.product-card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.product-price-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  color: var(--primary-pink-hover);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal & Items Carrito */
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-light-pink);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.qty-btn {
+  border: none;
+  background: none;
+  color: var(--primary-pink);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.text-pink {
+  color: var(--primary-pink);
+}

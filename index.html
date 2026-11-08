@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="icon" type="image/png" href="imagenes/logo.png"> <!--favicon (logo de arriba)-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Fiu Fiu Home Bakery | Menú Artesanal</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <div class="brand-logo"><img src="imagenes/logo.png" alt=""></div>
+        <div>
+          <span class="brand-title">Los Fiu Fiu</span>
+          <span class="brand-subtitle d-block">HOME BAKERY</span>
+        </div>
+      </a>
+      
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn btn-cart position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+          <i class="fa-solid fa-cart-shopping fs-5"></i>
+          <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner Anuncio -->
+  <div class="promo-banner text-center py-2">
+    ✨ ¡Hechos frescos todos los días! Envíos directos a tu puerta 🛵
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero-section py-5 position-relative overflow-hidden">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <span class="badge bg-soft-primary mb-3"> Santo Domingo, R.D.</span>
+          <h1 class="hero-title display-4 fw-extrabold mb-3">Un capricho dulce directo a tu corazón 💖</h1>
+          <p class="hero-subtitle lead text-muted mb-4">Postres artesanales horneados con ingredientes premium. Pide en línea y recibe tu orden directamente por WhatsApp.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#menu" class="btn btn-pink btn-lg rounded-pill px-4 shadow-sm">Ver Productos 🧁</a>
+            <a href="https://www.instagram.com/losfiufiuhomebakery/" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+              <i class="fa-brands fa-instagram me-1"></i> Instagram
+              <a href="https://www.ubereats.com/do/store/los-fiu-fiu-home-bakery/H-u1CmkmWNC4RhztfBL41w?diningMode=DELIVERY&sc=SEARCH_SUGGESTION" target="_blank" class="btn btn-lg rounded-pill px-4 text-white shadow-sm" style="background-color: #06c167; border-color: #06c167;">
+            <i class="fa-solid fa-bag-shopping me-2"></i> Pedir en Uber Eats</a>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center position-relative">
+          <div class="hero-image-wrapper">
+            <img src="imagenes/1. Tres Leches Tradicional XL.jpg" alt="1. Tres Leches Tradicional XL" class="img-fluid rounded-4 shadow-lg hero-img">
+            <div class="hero-floating-card shadow-sm">
+              <span class="fs-4">🌟</span>
+              <div class="text-start">
+                <strong class="d-block">Tres Leches Tradicional XL</strong>
+                <small class="text-muted">⭐ El favorito de todos</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección Menú -->
+  <section id="menu" class="py-5 bg-menu">
+    <div class="container py-3">
+      
+      <div class="text-center mb-4">
+        <h2 class="section-title fw-bold">Nuestra Carta Dulce</h2>
+        <p class="text-muted">Explora nuestras especialidades artesanales</p>
+      </div>
+
+      <!-- Buscador y Filtros -->
+      <div class="row justify-content-between align-items-center mb-4 gy-3">
+        <div class="col-md-6 col-lg-5">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchInput" class="form-control rounded-pill ps-5" placeholder="Buscar por nombre o ingrediente...">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-7">
+          <div class="d-flex flex-wrap gap-2 justify-content-md-end filter-buttons">
+            <button class="btn btn-filter active" data-filter="all">Todos</button>
+            <button class="btn btn-filter" data-filter="tres-leches">Carlotas & Dulce de Leche</button>
+            <button class="btn btn-filter" data-filter="carlotas">Tres Leches & Flan de Coco </button>
+            <button class="btn btn-filter" data-filter="combos">Choco Flan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de Productos -->
+      <div class="row g-4" id="productsGrid">
+        <!-- Generado dinámicamente con JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Ventana Modal del Carrito -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 rounded-4 shadow">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-header-title fw-bold fs-4" id="cartModalLabel">🛍️ Tu Pedido Dulce</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body py-4">
+          <div id="cartItemsContainer">
+            <!-- Items del carrito -->
+          </div>
+          
+          <!-- Formulario de Entrega -->
+          <form id="orderForm" class="mt-4 pt-3 border-top">
+            <h6 class="fw-bold mb-3">Datos para la entrega / retiro:</h6>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Nombre Completo *</label>
+                <input type="text" id="custName" class="form-control rounded-3" placeholder="Ej: María Pérez" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Teléfono de Contacto *</label>
+                <input type="tel" id="custPhone" class="form-control rounded-3" placeholder="Ej: 809-555-0199" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Método de Entrega</label>
+                <select id="deliveryType" class="form-select rounded-3">
+                  <option value="delivery">Envío a Domicilio (Delivery)</option>
+                  <option value="pickup">Pick Up (Retiro en tienda)</option>
+                </select>
+              </div>
+              <div class="col-md-6" id="addressGroup">
+                <label class="form-label small fw-semibold">Dirección de Entrega</label>
+                <input type="text" id="custAddress" class="form-control rounded-3" placeholder="Sector, Calle, Edificio / Casa">
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-semibold">Notas o Especificaciones adicionales (Opcional)</label>
+                <textarea id="custNotes" class="form-control rounded-3" rows="2" placeholder="Ej: Escribir nota de 'Feliz Cumpleaños', empacar por separado..."></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-0 pt-0 d-flex justify-content-between align-items-center">
+          <div>
+            <span class="text-muted d-block small">Total de la orden:</span>
+            <span id="cartTotal" class="fs-4 fw-bold text-pink">RD$ 0.00</span>
+          </div>
+          <button type="button" id="btnSendWhatsapp" class="btn btn-whatsapp btn-lg rounded-pill px-4">
+            <i class="fa-brands fa-whatsapp me-2 fs-5"></i> Enviar Pedido por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notificación -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="addToCartToast" class="toast border-0 shadow-lg rounded-4" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-body d-flex align-items-center gap-2 bg-dark text-white rounded-4">
+        <i class="fa-solid fa-circle-check text-success fs-5"></i>
+        <span>¡Producto añadido al carrito!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script Personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>
